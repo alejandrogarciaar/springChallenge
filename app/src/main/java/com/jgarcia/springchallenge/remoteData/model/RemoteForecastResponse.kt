@@ -6,7 +6,7 @@ data class RemoteForecastResponse(
     @SerializedName("coord")
     val coordinates: RemoteCoordinates,
     @SerializedName("weather")
-    val weather: RemoteWeather,
+    val weather: List<RemoteWeather>,
     @SerializedName("main")
     val main: RemoteMain,
     @SerializedName("wind")

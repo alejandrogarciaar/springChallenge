@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightGrey"
-    app:behavior_peekHeight="50dp"
+    app:behavior_peekHeight="@dimen/dimen40"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <ProgressBar
         android:id="@+id/pbLoading"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dimen20"
         android:layout_marginTop="@dimen/dimen10"
         android:indeterminateTint="@color/black"
         android:textColor="@color/black"
@@ -46,5 +46,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLocations"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dimen10"
+        android:layout_marginTop="@dimen/dimen20"
+        android:layout_marginEnd="@dimen/dimen10"
+        android:layout_marginBottom="@dimen/dimen10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSwipeUp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

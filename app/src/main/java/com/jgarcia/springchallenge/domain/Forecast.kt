@@ -7,7 +7,7 @@ import kotlinx.android.parcel.Parcelize
 
 data class Forecast(
     val location: Location,
-    val weather: Weather,
+    val weather: List<Weather>,
     val main: Main,
     val wind: Wind,
     val id: Long,

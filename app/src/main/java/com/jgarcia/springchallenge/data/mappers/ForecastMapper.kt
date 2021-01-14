@@ -11,11 +11,13 @@ class ForecastMapper @Inject constructor() {
                 latitude = remoteForecastResponse.coordinates.latitude,
                 longitude = remoteForecastResponse.coordinates.longitude
             ),
-            weather = Forecast.Weather(
-                id = remoteForecastResponse.weather.id,
-                main = remoteForecastResponse.weather.main,
-                description = remoteForecastResponse.weather.description
-            ),
+            weather = remoteForecastResponse.weather.map {
+                Forecast.Weather(
+                    id = it.id,
+                    main = it.main,
+                    description = it.description
+                )
+            },
             main = Forecast.Main(
                 temp = remoteForecastResponse.main.temp,
                 feelsLike = remoteForecastResponse.main.feelsLike,

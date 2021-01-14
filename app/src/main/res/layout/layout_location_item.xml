@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerLocation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimen20"
+    android:layout_marginEnd="@dimen/dimen10"
+    android:layout_marginBottom="@dimen/dimen10"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLatitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxWidth="@dimen/dimen20"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize15"
+        android:textStyle="bold"
+        tools:text="Latitude: 47.90" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLongitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxWidth="@dimen/dimen20"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize15"
+        android:textStyle="bold"
+        tools:text="Lon: 12.90" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivRemove"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:src="@drawable/ic_remove" />
+
+
+</LinearLayout>

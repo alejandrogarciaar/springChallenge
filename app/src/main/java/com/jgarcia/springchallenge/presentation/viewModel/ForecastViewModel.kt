@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.jgarcia.springchallenge.domain.Forecast
 import com.jgarcia.springchallenge.domain.util.Result
-import com.jgarcia.springchallenge.usecases.forecast.GetForecastByCoordinates
 import com.jgarcia.springchallenge.usecases.localLocations.DeleteLocation
 import com.jgarcia.springchallenge.usecases.localLocations.GetStoredLocations
 import com.jgarcia.springchallenge.usecases.localLocations.SaveLocation
@@ -15,8 +14,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
-class HomeViewModel @ViewModelInject constructor(
-    private val getForecastByCoordinates: GetForecastByCoordinates,
+class ForecastViewModel @ViewModelInject constructor(
     private val getStoredLocations: GetStoredLocations,
     private val saveLocation: SaveLocation,
     private val deleteLocation: DeleteLocation
@@ -26,7 +24,6 @@ class HomeViewModel @ViewModelInject constructor(
     override val coroutineContext: CoroutineContext = Dispatchers.IO
 
     private val storedLocations: MutableLiveData<Result<List<Forecast.Location>>> = MutableLiveData()
-    private val currentForecast: MutableLiveData<Result<Forecast>> = MutableLiveData()
 
     fun observeStoredLocations() = storedLocations
 

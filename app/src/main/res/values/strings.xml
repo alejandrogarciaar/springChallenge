@@ -3,4 +3,17 @@
     <string name="google_maps_key">AIzaSyC5bMvNwZDhGUhPpx1dOHA6jhU-u1guWFQ</string>
     <string name="swipe_up_to_see_stored_locations">Swipe up to see your stored locations</string>
     <string name="empty_stored_locations">You have no locations stored</string>
+    <string name="something_went_wrong">Something went wrong. Please try later</string>
+    <string name="forecast_main">Main: %1$s</string>
+    <string name="forecast_city_name">Place: %1$s</string>
+    <string name="forecast_main_description">Description: %1$s</string>
+    <string name="forecast_current_temp">Current temp: %1$.2f Kelvin</string>
+    <string name="forecast_current_min_temp">Min temp: %1$.2f Kelvin</string>
+    <string name="forecast_current_max_temp">Max temp: %1$.2f Kelvin</string>
+    <string name="forecast_current_wind_speed">Wind speed: %1$.2f meter/sec</string>
+    <string name="forecast_current_humidity">Humidity: %1$d%%</string>
+    <string name="forecast_temperature_wind">Temperature / Wind</string>
+    <string name="forecast_weather">Weather</string>
+    <string name="stored_location_latitude">Latitude: %1$.4f</string>
+    <string name="stored_location_longitude">Longitude: %1$.4f</string>
 </resources>
