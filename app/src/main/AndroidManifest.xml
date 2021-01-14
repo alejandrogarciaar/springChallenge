@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.jgarcia.springchallenge">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -13,10 +15,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpringChallenge"
         tools:targetApi="n">
-        <activity android:name=".presentation.MainActivity">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".presentation.ui.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
