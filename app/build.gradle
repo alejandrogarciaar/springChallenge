@@ -37,6 +37,9 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
 }
 
 dependencies {
@@ -86,6 +89,12 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
 
     testImplementation 'junit:junit:4.13.1'
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.2"
+    testImplementation 'org.mockito:mockito-core:3.5.11'
+    testImplementation 'org.mockito:mockito-inline:3.5.11'
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
+
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }

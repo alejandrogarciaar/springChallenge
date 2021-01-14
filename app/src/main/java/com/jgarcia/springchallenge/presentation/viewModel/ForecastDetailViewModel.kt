@@ -16,7 +16,8 @@ class ForecastDetailViewModel @ViewModelInject constructor(
     private val getForecastByCoordinates: GetForecastByCoordinates
 ) : ViewModel(), CoroutineScope {
 
-    override val coroutineContext: CoroutineContext = Dispatchers.IO
+    // Provided for testing purpose
+    override var coroutineContext: CoroutineContext = Dispatchers.IO
 
     private val currentForecast: MutableLiveData<Result<Forecast>> = MutableLiveData()
 
