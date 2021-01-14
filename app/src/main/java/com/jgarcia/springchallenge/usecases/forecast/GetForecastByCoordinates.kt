@@ -1,4 +1,4 @@
-package com.jgarcia.springchallenge.usecases
+package com.jgarcia.springchallenge.usecases.forecast
 
 import com.jgarcia.springchallenge.data.repository.ForecastRepository
 import com.jgarcia.springchallenge.domain.Forecast

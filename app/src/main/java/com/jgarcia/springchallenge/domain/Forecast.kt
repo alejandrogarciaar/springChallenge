@@ -1,6 +1,8 @@
 package com.jgarcia.springchallenge.domain
 
 import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 data class Forecast(
@@ -12,8 +14,11 @@ data class Forecast(
     val name: String
 ) {
 
+    @Entity
     @Parcelize
     data class Location(
+        @PrimaryKey(autoGenerate = true)
+        val id: Int? = null,
         val longitude: Double,
         val latitude: Double
     ) : Parcelable

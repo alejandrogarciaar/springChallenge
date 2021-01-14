@@ -1,4 +1,11 @@
 package com.jgarcia.springchallenge.usecases.localLocations
 
-class DeleteLocation {
+import com.jgarcia.springchallenge.data.repository.LocalForecastRepository
+import com.jgarcia.springchallenge.domain.Forecast
+import javax.inject.Inject
+
+class DeleteLocation @Inject constructor(private val localForecastRepository: LocalForecastRepository) {
+    suspend operator fun invoke(location: Forecast.Location) {
+        localForecastRepository.removeLocation(location)
+    }
 }
