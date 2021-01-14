@@ -2,7 +2,7 @@ package com.jgarcia.springchallenge.remoteData.model
 
 import com.google.gson.annotations.SerializedName
 
-data class RemoteWeatherResponse(
+data class RemoteForecastResponse(
     @SerializedName("coord")
     val coordinates: RemoteCoordinates,
     @SerializedName("weather")
@@ -38,11 +38,11 @@ data class RemoteWeatherResponse(
         @SerializedName("temp")
         val temp: Double,
         @SerializedName("feels_like")
-        val feels_like: Double,
+        val feelsLike: Double,
         @SerializedName("temp_min")
-        val temp_min: Double,
+        val tempMin: Double,
         @SerializedName("temp_max")
-        val temp_max: Double,
+        val tempMax: Double,
         @SerializedName("pressure")
         val pressure: Double,
         @SerializedName("humidity")

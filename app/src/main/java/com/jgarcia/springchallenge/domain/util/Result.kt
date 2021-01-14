@@ -1,4 +1,4 @@
-package com.jgarcia.tragosapp.domain.util
+package com.jgarcia.springchallenge.domain.util
 
 sealed class Result<out T> {
     object Loading : Result<Nothing>()

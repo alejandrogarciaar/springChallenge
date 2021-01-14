@@ -5,18 +5,12 @@ import com.jgarcia.springchallenge.remoteData.util.Url
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface WeatherAPI {
+interface ForecastAPI {
 
     @GET(Url.WEATHER_PATH)
-    suspend fun getWeatherByCoordinates(
+    suspend fun getForecastByCoordinates(
         @Query("lat") latitude: Double,
         @Query("lon") longitude: Double,
-        @Query("appid") apiKey: String = Url.API_KEY
-    ): RemoteForecastResponse
-
-    @GET(Url.WEATHER_PATH)
-    suspend fun getWeatherByCityId(
-        @Query("id") cityId: Long,
         @Query("appid") apiKey: String = Url.API_KEY
     ): RemoteForecastResponse
 }
